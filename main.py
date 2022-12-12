@@ -1,6 +1,14 @@
-iris = load_iris()
+class Data:
+    def __init__(self, x, y, name):
+        self.x = x
+        self.y = y
+        self.name = name
 
-X = iris["data"]
-Y = iris["target"]
+    def getX(self):
+        return self.x
 
-x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=RANDOM_STATUS)
+    def getY(self):
+        return self.y
+
+    def getName(self):
+        return self.name
